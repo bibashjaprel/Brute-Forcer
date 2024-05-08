@@ -36,17 +36,17 @@ You will be prompted to enter the target URL and wordlist file path. The script 
 ### Contributing
 Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
 
-1.Fork the repository.
+1. Fork the repository.
 
-2.Create a new branch (git checkout -b feature/your-feature-name).
+2. Create a new branch (git checkout -b feature/your-feature-name).
 
-3.Make your changes.
+3. Make your changes.
 
-4.Commit your changes (git commit -am 'Add new feature').
+4. Commit your changes (git commit -am 'Add new feature').
 
-5.Push to the branch (git push origin feature/your-feature-name).
+5. Push to the branch (git push origin feature/your-feature-name).
 
-6.Create a new pull request.
+6. Create a new pull request.
 
 ### Wordlist
 The wordlist/ directory contains common directory names. You can customize the `common_directories.txt` file or add your own wordlist files for directory brute forcing.
@@ -54,4 +54,6 @@ The wordlist/ directory contains common directory names. You can customize the `
 ## Disclaimer
 This tool is intended for ethical hacking and security testing purposes only. Use it responsibly and only on websites you have permission to test.
 
+### License
 
+This project is licensed under the [MIT License](LICENSE).
