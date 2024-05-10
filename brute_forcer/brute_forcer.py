@@ -20,9 +20,14 @@ def brute_force_directories(url, wordlist, num_threads=10):
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=num_threads) as executor:
         futures = [executor.submit(check_directory, url, directory) for directory in directories]
-
-        for future in concurrent.futures.as_completed(futures):
-            future.result()
+        try:
+            for future in concurrent.futures.as_completed(futures):
+               future.result()
+        except KeyboardInterrupt:
+            print("\nKeyboardInterrupt received. Terminating...")
+            for future in futures:
+                future.cancel()
+            executor.shutdown(wait=False)
 
 if __name__ == "__main__":
     target_url = input("Enter the target URL: ")
