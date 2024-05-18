@@ -16,13 +16,18 @@ Directory Brute Forcer is a Python script for brute forcing directories on a tar
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/bibashjaprel/Brute-Forcer
+git clone --depth=1 https://github.com/bibashjaprel/Brute-Forcer #To clone the latest commmit
 ```
 2.Navigate to the directory_brute_forcer directory:
 ```bash
 cd Brute-Forcer
 ```
-3.Install dependencies:
+3.Use Virtual enivronment for python
+```bash
+python -m venv virtual_environment
+source virtual_environment/bin/activate
+```
+4.Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
