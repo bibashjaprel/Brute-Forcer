@@ -1,7 +1,24 @@
 import requests
+import re,sys,argparse
 import concurrent.futures
 from urllib.parse import urljoin
-
+#Check and parse the Argument
+parser = argparse.ArgumentParser()
+parser.add_argument("-u", "--url", help="Use -u or --url followed by a url")
+parser.add_argument("-w", "--wordlist", help="Use -w or --wordlist followed by wordlist")
+args = parser.parse_args()
+if not args.url:
+    print(f"\033[0;31mPlease Provide a url use -h or --help to get the help message\033[0m")
+    sys.exit(1)
+else:
+        url = args.url
+# Function to Check the Url is Valid or Invalid 
+def url_checker(url):
+    url_regex = r'^https?:\/\/'
+    if url and not re.match(url_regex, url):
+        print("Invalid URL. Please provide a URL with http or https scheme.")
+        sys.exit(1)  
+    return url
 # Function to check if a directory exists on the target website
 def check_directory(url, directory):
     try:
@@ -30,8 +47,8 @@ def brute_force_directories(url, wordlist, num_threads=10):
             executor.shutdown(wait=False)
 
 if __name__ == "__main__":
-    target_url = input("Enter the target URL: ")
-    wordlist_path = '../wordlist/common_directories.txt'
-
-
+    url=args.url
+    target_url = url_checker(url)
+    wordlist_path = args.wordlist if args.wordlist else '../wordlist/common_directories.txt'
     brute_force_directories(target_url, wordlist_path)
+
