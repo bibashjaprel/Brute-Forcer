@@ -34,7 +34,11 @@ pip install -r requirements.txt
 ### Usage
 Run the `brute_forcer.py` script with the target URL as an argument:
 ```bash
-python brute_forcer/brute_forcer.py -u url # example:python brute_forcer/brute_forcer.py -u  https://example.com/  or python brute_forcer/brute_forcer.py -u https://example.com -w /path/to/wordlist
+python brute_forcer/brute_forcer.py -u  https://example.com/
+```
+or
+```bash
+python brute_forcer/brute_forcer.py -u https://example.com -w /path/to/wordlist
 ```
 You will be prompted to enter the target URL and wordlist file path. The script will then attempt to brute force directories on the target website and print the results.
 
