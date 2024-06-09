@@ -6,7 +6,7 @@
 # A simple yet fast tool for finding web directories.
 
 import requests
-import re, sys, argparse
+import re, sys, argparse, os
 import concurrent.futures
 from urllib.parse import urljoin
 
@@ -75,7 +75,12 @@ def brute_force_directories(url, wordlist, include_404, num_threads):
 if __name__ == "__main__":
     url = args.url
     target_url = url_checker(url)
-    wordlist_path = args.wordlist if args.wordlist else '../wordlist/common_directories.txt'
+
+    # Get the script's directory
+    script_dir = os.path.dirname(os.path.realpath(__file__))
+    default_wordlist_path = os.path.join(script_dir, '..', 'wordlists', 'common_directories.txt')
+
+    wordlist_path = args.wordlist if args.wordlist else default_wordlist_path
     include_404 = args.include_404
     num_threads = args.threads
     brute_force_directories(target_url, wordlist_path, include_404, num_threads)
