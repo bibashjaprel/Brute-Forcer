@@ -1,68 +1,64 @@
-# Directory Brute Forcer
+# [`Brute-Forcer`](https://github.com/bibashjaprel/brute-forcer)🐉
+*`SIMPLE YET MINIMAL`* ||  [`Brute-Forcer`](https://github.com/bibashjaprel/brute-forcer/),&nbsp; ``A tool for brute forcing web directoies the fast way.``
 
-Directory Brute Forcer is a Python script for brute forcing directories on a target website using a wordlist of common directory names. It provides a simple yet effective way to discover potential directories on a web server.
+## Table of contents 📔
 
-## Features
+* [`Features`](#features)
+* [`Installation`](#installation)
+* [`Contribution`](#contribution)
+* [`License`](#license)
 
-- Brute forces directories on a target website using a wordlist of common directory names.
-- Prints found directories with their HTTP response status codes.
-- Supports multi-threading for faster directory discovery.
-- Customizable wordlist for directory brute forcing.
 
-## Getting Started
 
-### Installation
 
-1. Clone this repository:
+<a name="features"></a>
+## Features 🍙
+- **Fast**: [`Brute-forcer`](https://github.com/bibashjaprel/brute-forcer) is designed to be fast, by implementing multi-threading for faster directory discovery.
+- **Ease**: This tool is designed to be very user friendly and anyone can use it.
+- **Simple**: [`Brute-forcer`](https://github.com/bibashjaprel/brute-forcer)is made upon less ``slokes``.
+- **Customizable**: It has customizable wordlists for directory brute forcing, anyone can use any wordlists as they prefer to use.
 
-```bash
-git clone --depth=1 https://github.com/bibashjaprel/Brute-Forcer #To clone the latest commmit
+ <a name="installation"></a>
+ ## Installation 📩
+    
+  <details> <summary><code>🪄 Binary </code></summary>
+    &nbsp;
+   
+   -  **Manual**: You can directly download the binary from [**releases**](https://github.com/bibashjaprel/brute-forcer/releases) and use it.
+
+  </details>
+  <details> <summary><code>🌼 Source </code></summary>
+  &nbsp;
+ 
+  ```bash
+  git clone --depth=1 https://github.com/bibashjaprel/brute-forcer --branch=main
+  cd brute-forcer
 ```
-2.Navigate to the directory_brute_forcer directory:
-```bash
-cd Brute-Forcer
-```
-3.Use Virtual enivronment for python
-```bash
+  **``virtual environment``**
+  ```bash
 python -m venv virtual_environment
 source virtual_environment/bin/activate
 ```
-4.Install dependencies:
+**``dependencies``**
 ```bash
 pip install -r requirements.txt
 ```
-### Usage
-Run the `brute_forcer.py` script with the target URL as an argument:
+**``brute-forcer help menu``**
 ```bash
-python brute_forcer/brute_forcer.py -u  https://example.com/
+python3 brute-forcer -h
 ```
-or
-```bash
-python brute_forcer/brute_forcer.py -u https://example.com -w /path/to/wordlist
-```
-You will be prompted to enter the target URL and wordlist file path. The script will then attempt to brute force directories on the target website and print the results.
+  <strong>Now you are good to go.</strong>
+</details>
 
-### Contributing
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
 
-1. Fork the repository.
 
-2. Create a new branch (git checkout -b feature/your-feature-name).
+<a name="contribution"></a> 
+## Contribution 🤝
 
-3. Make your changes.
+Contributions are welcome! You can suggest features, report bugs, fix issues via [issues](https://github.com/bibashjaprel/brute-forcer/issues) or [pull requests](https://github.com/bibashjaprel/bute-forcer/pulls). Help with ``code`` or any other are appreciated.
 
-4. Commit your changes (git commit -am 'Add new feature').
 
-5. Push to the branch (git push origin feature/your-feature-name).
-
-6. Create a new pull request.
-
-### Wordlist
-The wordlist/ directory contains common directory names. You can customize the `common_directories.txt` file or add your own wordlist files for directory brute forcing.
-
-## Disclaimer
-This tool is intended for ethical hacking and security testing purposes only. Use it responsibly and only on websites you have permission to test.
-
-### License
-
-This project is licensed under the [MIT License](LICENSE).
+<a name="license"></a> 
+## License 🔐
+ Licensed under the [**`MIT LICENSE`**](/LICENSE) 
+ <hr>
