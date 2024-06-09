@@ -1,7 +1,5 @@
 #
 # Author: Bibash Japrel (github.com/bibashjaprel)
-# https://github.com/t3l3machus
-#
 
 # A simple yet fast tool for finding web directories.
 
