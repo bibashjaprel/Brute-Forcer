@@ -45,7 +45,7 @@ pip install -r requirements.txt
 ```
 **``brute-forcer help menu``**
 ```bash
-pyton3 brute-forcer -h
+python3 brute-forcer -h
 ```
   <strong>Now you are good to go.</strong>
 </details>
